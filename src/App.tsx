@@ -1,19 +1,24 @@
-import * as React from 'react';
+import React from 'react'
+import { Button } from '@/components/ui/button'
+import { Badge } from '@/components/ui/badge'
+import '@/styles/globals.css'
 
-const App: React.FC = () => {
+function App() {
   return (
-    <div className="p-6 max-w-sm mx-auto bg-white rounded-xl shadow-md flex items-center space-x-4">
-      <div className="flex-shrink-0">
-        <svg className="h-12 w-12 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-        </svg>
+    <div className="p-4 space-y-4">
+      <div className="space-x-2">
+        <Button>Default Button</Button>
+        <Button variant="secondary">Secondary Button</Button>
+        <Button variant="destructive">Destructive Button</Button>
       </div>
-      <div>
-        <h2 className="text-xl font-medium text-black">Hello Figma!</h2>
-        <p className="text-gray-500">This is a React plugin with Tailwind CSS.</p>
+      
+      <div className="space-x-2">
+        <Badge>Default Badge</Badge>
+        <Badge variant="secondary">Secondary Badge</Badge>
+        <Badge variant="destructive">Destructive Badge</Badge>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default App;
+export default App
