@@ -1,6 +1,6 @@
 {
-  "name": "PluginTest",
-  "id": "1440014073944689458",
+  "name": "<YOUR PLKG NAME HERE>",
+  "id": "<ADD YOUR PLUGIN ID HERE>",
   "api": "1.0.0",
   "main": "dist/code.js",
   "capabilities": [],
