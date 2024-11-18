@@ -1,40 +1,84 @@
-Below are the steps to get your plugin running. You can also find instructions at:
+# 🎨 Modern Figma Plugin Template
 
-  https://www.figma.com/plugin-docs/plugin-quickstart-guide/
+A supercharged Figma plugin template with React, Tailwind CSS, and shadcn/ui components. Built for developers who want to create beautiful, responsive, and accessible Figma plugins with modern web technologies.
 
-This plugin template uses Typescript and NPM, two standard tools in creating JavaScript applications.
+## ✨ Features
 
-First, download Node.js which comes with NPM. This will allow you to install TypeScript and other
-libraries. You can find the download link here:
+- 🚀 **React 18** - Latest React features for building interactive UIs
+- 💅 **Tailwind CSS** - Utility-first CSS framework for rapid UI development
+- 🎯 **TypeScript** - Type safety and enhanced developer experience
+- 🧩 **shadcn/ui** - High-quality, accessible components built on Radix UI
+- 🌓 **Dark Mode** - Built-in dark mode support
+- 📦 **Webpack** - Optimized build setup for Figma plugins
+- 🔥 **Hot Reload** - Fast development with hot module replacement
 
-  https://nodejs.org/en/download/
+## 🚀 Quick Start
 
-Next, install TypeScript using the command:
+1. Clone this repository
+```bash
+git clone https://github.com/yourusername/figma-plugin-template.git
+cd figma-plugin-template
+```
 
-  npm install -g typescript
+2. Install dependencies
+```bash
+npm install
+```
 
-Finally, in the directory of your plugin, get the latest type definitions for the plugin API by running:
+3. Start development server
+```bash
+npm run dev
+```
 
-  npm install --save-dev @figma/plugin-typings
+4. In Figma desktop app:
+   - Go to `Plugins` > `Development` > `Import plugin from manifest...`
+   - Choose the `manifest.json` file from this project
 
-If you are familiar with JavaScript, TypeScript will look very familiar. In fact, valid JavaScript code
-is already valid Typescript code.
+## 🛠️ Development
 
-TypeScript adds type annotations to variables. This allows code editors such as Visual Studio Code
-to provide information about the Figma API while you are writing code, as well as help catch bugs
-you previously didn't notice.
+### Project Structure
+```
+src/
+  ├── components/    # React components
+  │   └── ui/       # shadcn/ui components
+  ├── styles/       # Global styles and Tailwind config
+  ├── App.tsx       # Main React component
+  ├── ui.tsx        # Plugin UI entry point
+  └── code.ts       # Plugin logic
+```
 
-For more information, visit https://www.typescriptlang.org/
+### Available Scripts
 
-Using TypeScript requires a compiler to convert TypeScript (code.ts) into JavaScript (code.js)
-for the browser to run.
+- `npm run dev` - Start development server with hot reload
+- `npm run build` - Build production-ready plugin
+- `npm run watch` - Watch for changes in development
 
-We recommend writing TypeScript code using Visual Studio code:
+## 🎨 Customization
 
-1. Download Visual Studio Code if you haven't already: https://code.visualstudio.com/.
-2. Open this directory in Visual Studio Code.
-3. Compile TypeScript to JavaScript: Run the "Terminal > Run Build Task..." menu item,
-    then select "npm: watch". You will have to do this again every time
-    you reopen Visual Studio Code.
+### Theming
+The template comes with a beautiful default theme, but you can easily customize it:
 
-That's it! Visual Studio Code will regenerate the JavaScript file every time you save.
+1. Modify `src/styles/globals.css` for theme variables
+2. Update `tailwind.config.js` for Tailwind configuration
+3. Use shadcn/ui components from `src/components/ui/`
+
+### Adding New Components
+```bash
+# Example: Adding a new shadcn/ui component
+npx shadcn-ui@latest add button
+```
+
+## 📚 Resources
+
+- [Figma Plugin API Documentation](https://www.figma.com/plugin-docs/)
+- [React Documentation](https://react.dev/)
+- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
+- [shadcn/ui Documentation](https://ui.shadcn.com/)
+
+## 🤝 Contributing
+
+Contributions are welcome! Feel free to submit issues and pull requests.
+
+## 📝 License
+
+MIT License - feel free to use this template for your own plugins!
