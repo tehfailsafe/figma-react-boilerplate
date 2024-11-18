@@ -28,7 +28,7 @@
       @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
       body {
         font-family: "Inter", sans-serif;
-        background: linear-gradient(180deg, #0F0F0F 0%, #1A1A1A 100%);
+        background: linear-gradient(180deg, #0f0f0f 0%, #1a1a1a 100%);
         min-height: 100vh;
       }
       .gradient-text {
@@ -37,7 +37,11 @@
         -webkit-text-fill-color: transparent;
       }
       .hero-gradient {
-        background: radial-gradient(circle at 50% 0%, rgba(13, 153, 255, 0.15) 0%, rgba(13, 153, 255, 0) 50%);
+        background: radial-gradient(
+          circle at 50% 0%,
+          rgba(13, 153, 255, 0.15) 0%,
+          rgba(13, 153, 255, 0) 50%
+        );
       }
       .card-hover {
         transition: all 0.3s ease;
@@ -58,8 +62,7 @@
         inset: -1px;
         padding: 1px;
         background: linear-gradient(135deg, #0d99ff 0%, #6c5ce7 100%);
-        -webkit-mask: 
-          linear-gradient(#fff 0 0) content-box, 
+        -webkit-mask: linear-gradient(#fff 0 0) content-box,
           linear-gradient(#fff 0 0);
         -webkit-mask-composite: xor;
         mask-composite: exclude;
@@ -84,7 +87,9 @@
   </head>
   <body class="text-white">
     <!-- Header -->
-    <header class="fixed w-full backdrop-blur-md bg-figma-primary/80 border-b border-white/10 z-50">
+    <header
+      class="fixed w-full backdrop-blur-md bg-figma-primary/80 border-b border-white/10 z-50"
+    >
       <nav class="container mx-auto px-6 py-4">
         <div class="flex items-center justify-between">
           <div class="text-xl font-bold gradient-text">
@@ -121,13 +126,18 @@
     <!-- Hero Section -->
     <section class="hero-gradient pt-48 pb-32 px-6">
       <div class="container mx-auto text-center max-w-4xl">
-        <div class="inline-block px-4 py-2 bg-white/5 rounded-full text-sm mb-8 border border-white/10">
+        <div
+          class="inline-block px-4 py-2 bg-white/5 rounded-full text-sm mb-8 border border-white/10"
+        >
           🚀 Modern Figma Plugin Development
         </div>
         <h1 class="text-5xl md:text-7xl font-bold mb-8 leading-tight">
-          Build Better <span class="gradient-text">Figma Plugins</span>
+          Build Better<br />
+          <span class="gradient-text">Figma Plugins</span>
         </h1>
-        <p class="text-lg md:text-xl text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed">
+        <p
+          class="text-lg md:text-xl text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed"
+        >
           A supercharged boilerplate for building Figma plugins with React,
           TypeScript, and Tailwind CSS. Start building faster with modern tools.
         </p>
@@ -153,14 +163,18 @@
       <div class="container mx-auto px-6">
         <div class="text-center mb-20">
           <h2 class="text-4xl md:text-5xl font-bold">
-            Everything You Need to Build <span class="gradient-text">Amazing Plugins</span>
+            Everything You Need to Build
+            <span class="gradient-text">Amazing Plugins</span>
           </h2>
           <p class="text-gray-400 mt-6 text-lg max-w-2xl mx-auto">
-            Start with a solid foundation and build your plugin faster than ever before
+            Start with a solid foundation and build your plugin faster than ever
+            before
           </p>
         </div>
         <div class="grid md:grid-cols-3 gap-8">
-          <div class="bg-white/5 p-8 rounded-2xl card-hover border border-white/10">
+          <div
+            class="bg-white/5 p-8 rounded-2xl card-hover border border-white/10"
+          >
             <div class="text-figma-accent text-3xl mb-6">
               <i class="fas fa-bolt"></i>
             </div>
@@ -170,7 +184,9 @@
               development experience.
             </p>
           </div>
-          <div class="bg-white/5 p-8 rounded-2xl card-hover border border-white/10">
+          <div
+            class="bg-white/5 p-8 rounded-2xl card-hover border border-white/10"
+          >
             <div class="text-figma-accent text-3xl mb-6">
               <i class="fas fa-palette"></i>
             </div>
@@ -180,7 +196,9 @@
               development.
             </p>
           </div>
-          <div class="bg-white/5 p-8 rounded-2xl card-hover border border-white/10">
+          <div
+            class="bg-white/5 p-8 rounded-2xl card-hover border border-white/10"
+          >
             <div class="text-figma-accent text-3xl mb-6">
               <i class="fas fa-moon"></i>
             </div>
@@ -206,22 +224,25 @@
         </div>
         <div class="max-w-3xl mx-auto space-y-6">
           <div>
-            <p class="text-gray-400 mb-3 text-sm font-medium"># Clone the repository</p>
+            <p class="text-gray-400 mb-3 text-sm font-medium">
+              # Clone the repository
+            </p>
             <code class="text-figma-accent">
-              git clone https://github.com/tehfailsafe/figma-plugin-boilerplate.git
+              git clone
+              https://github.com/tehfailsafe/figma-plugin-boilerplate.git
             </code>
           </div>
           <div>
-            <p class="text-gray-400 mb-3 text-sm font-medium"># Install dependencies</p>
-            <code class="text-figma-accent">
-              npm install
-            </code>
+            <p class="text-gray-400 mb-3 text-sm font-medium">
+              # Install dependencies
+            </p>
+            <code class="text-figma-accent"> npm install </code>
           </div>
           <div>
-            <p class="text-gray-400 mb-3 text-sm font-medium"># Start development server</p>
-            <code class="text-figma-accent">
-              npm run dev
-            </code>
+            <p class="text-gray-400 mb-3 text-sm font-medium">
+              # Start development server
+            </p>
+            <code class="text-figma-accent"> npm run dev </code>
           </div>
         </div>
       </div>
@@ -239,7 +260,9 @@
           </p>
         </div>
         <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          <div class="bg-white/5 p-8 rounded-2xl card-hover border border-white/10">
+          <div
+            class="bg-white/5 p-8 rounded-2xl card-hover border border-white/10"
+          >
             <h3 class="text-xl font-semibold mb-6">UI Components</h3>
             <ul class="space-y-4 text-gray-400">
               <li class="flex items-center">
@@ -264,7 +287,9 @@
               </li>
             </ul>
           </div>
-          <div class="bg-white/5 p-8 rounded-2xl card-hover border border-white/10">
+          <div
+            class="bg-white/5 p-8 rounded-2xl card-hover border border-white/10"
+          >
             <h3 class="text-xl font-semibold mb-6">Developer Experience</h3>
             <ul class="space-y-4 text-gray-400">
               <li class="flex items-center">
