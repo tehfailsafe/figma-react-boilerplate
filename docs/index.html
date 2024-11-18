@@ -141,14 +141,16 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero-gradient pt-48 pb-32 px-6">
-      <div class="container mx-auto text-center max-w-4xl space-y-16">
+    <section class="hero-gradient pt-24 md:pt-48 pb-32 px-6">
+      <div
+        class="container mx-auto text-center max-w-4xl space-y-8 md:space-y-16"
+      >
         <div
           class="inline-block px-4 py-2 bg-white/5 rounded-full text-sm mb-8 border border-white/10"
         >
           🚀 Modern Figma Plugin Development
         </div>
-        <h1 class="text-9xl md:text-8xl font-bold mb-12 leading-tight">
+        <h1 class="text-5xl md:text-8xl font-bold mb-12 leading-tight">
           Build Better<br />
           <span class="gradient-text">Figma Plugins</span>
         </h1>
@@ -254,19 +256,18 @@
               # Create a new plugin in Figma
             </p>
             <p class="text-sm text-gray-500 mb-4">
-              1. Open Figma and go to Menu > Plugins > Development > New Plugin<br>
-              2. Choose "Create new plugin"<br>
-              3. Copy the plugin ID and name from the manifest.json file<br>
-              4. Delete the plugin you just created<br>
-              5. Go to Menu > Plugins > Development > Import plugin from manifest<br>
+              1. Open Figma and go to Menu > Plugins > Development > New
+              Plugin<br />
+              2. Choose "Create new plugin"<br />
+              3. Copy the plugin ID and name from the manifest.json file<br />
+              4. Delete the plugin you just created<br />
+              5. Go to Menu > Plugins > Development > Import plugin from
+              manifest<br />
               6. Select the manifest.json file from this project
             </p>
             <code class="text-figma-accent block mb-4">
-              // manifest.json
-              {
-                "name": "Your Plugin Name",
-                "id": "1234567890123456789"
-              }
+              // manifest.json { "name": "Your Plugin Name", "id":
+              "1234567890123456789" }
             </code>
           </div>
           <div>
