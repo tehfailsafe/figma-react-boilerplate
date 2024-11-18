@@ -17,7 +17,7 @@ A supercharged Figma plugin boilerplate with React, Tailwind CSS, and shadcn/ui 
 1. Clone this repository
 
 ```bash
-git clone https://github.com/yourusername/figma-plugin-boilerplate.git
+git clone https://github.com/tehfailsafe/figma-plugin-boilerplate.git
 cd figma-plugin-boilerplate
 ```
 
