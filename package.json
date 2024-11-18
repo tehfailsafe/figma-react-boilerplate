@@ -4,7 +4,8 @@
   "description": "Figma Plugin with React",
   "main": "code.js",
   "scripts": {
-    "dev": "webpack --mode=development --watch",
+    "dev": "webpack serve --mode=development",
+    "watch": "webpack --mode=development --watch",
     "build": "webpack --mode=production"
   },
   "license": "MIT",
@@ -73,6 +74,7 @@
     "ts-loader": "^9.5.1",
     "typescript": "^5.0.0",
     "webpack": "^5.89.0",
-    "webpack-cli": "^5.1.4"
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.1.0"
   }
 }
