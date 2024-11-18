@@ -251,6 +251,26 @@
           </div>
           <div>
             <p class="text-gray-400 mb-3 text-sm font-medium">
+              # Create a new plugin in Figma
+            </p>
+            <p class="text-sm text-gray-500 mb-4">
+              1. Open Figma and go to Menu > Plugins > Development > New Plugin<br>
+              2. Choose "Create new plugin"<br>
+              3. Copy the plugin ID and name from the manifest.json file<br>
+              4. Delete the plugin you just created<br>
+              5. Go to Menu > Plugins > Development > Import plugin from manifest<br>
+              6. Select the manifest.json file from this project
+            </p>
+            <code class="text-figma-accent block mb-4">
+              // manifest.json
+              {
+                "name": "Your Plugin Name",
+                "id": "1234567890123456789"
+              }
+            </code>
+          </div>
+          <div>
+            <p class="text-gray-400 mb-3 text-sm font-medium">
               # Install dependencies
             </p>
             <code class="text-figma-accent"> npm install </code>
