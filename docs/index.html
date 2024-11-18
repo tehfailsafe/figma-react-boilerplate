@@ -46,6 +46,32 @@
         transform: translateY(-5px);
         box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
       }
+      .gradient-border-button {
+        position: relative;
+        background: rgba(255, 255, 255, 0.05);
+        z-index: 1;
+        transition: all 0.3s cubic-bezier(0, 0, 0.2, 1);
+      }
+      .gradient-border-button::before {
+        content: "";
+        position: absolute;
+        inset: -1px;
+        padding: 1px;
+        background: linear-gradient(135deg, #0d99ff 0%, #6c5ce7 100%);
+        -webkit-mask: 
+          linear-gradient(#fff 0 0) content-box, 
+          linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        pointer-events: none;
+        border-radius: 9999px;
+      }
+      .gradient-border-button:hover {
+        background: rgba(255, 255, 255, 0.1);
+      }
+      .gradient-border-button:hover::before {
+        opacity: 0.8;
+      }
       code {
         position: relative;
         display: block;
@@ -83,7 +109,7 @@
           </div>
           <a
             href="https://github.com/tehfailsafe/figma-plugin-boilerplate"
-            class="bg-white/10 hover:bg-white/20 px-6 py-2 rounded-full transition-all flex items-center space-x-2 border border-white/10"
+            class="gradient-border-button px-6 py-2 rounded-full flex items-center space-x-2 border border-white/10"
           >
             <i class="fab fa-github"></i>
             <span>GitHub</span>
@@ -108,13 +134,13 @@
         <div class="flex flex-col md:flex-row gap-4 justify-center">
           <a
             href="#getting-started"
-            class="bg-figma-accent hover:bg-figma-accent/90 px-8 py-3 rounded-full text-lg font-medium transition-all"
+            class="gradient-border-button px-8 py-3 rounded-full text-lg font-medium"
           >
             Get Started
           </a>
           <a
             href="https://github.com/tehfailsafe/figma-plugin-boilerplate"
-            class="bg-white/5 hover:bg-white/10 px-8 py-3 rounded-full text-lg font-medium transition-all border border-white/10"
+            class="gradient-border-button px-8 py-3 rounded-full text-lg font-medium"
           >
             <i class="fab fa-github mr-2"></i>View on GitHub
           </a>
