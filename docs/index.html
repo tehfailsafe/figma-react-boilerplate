@@ -15,8 +15,8 @@
           extend: {
             colors: {
               figma: {
-                primary: "#1E1E1E",
-                secondary: "#2C2C2C",
+                primary: "#0F0F0F",
+                secondary: "#1A1A1A",
                 accent: "#0D99FF",
               },
             },
@@ -28,18 +28,38 @@
       @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
       body {
         font-family: "Inter", sans-serif;
+        background: linear-gradient(180deg, #0F0F0F 0%, #1A1A1A 100%);
+        min-height: 100vh;
       }
       .gradient-text {
         background: linear-gradient(135deg, #0d99ff 0%, #6c5ce7 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
       }
+      .hero-gradient {
+        background: radial-gradient(circle at 50% 0%, rgba(13, 153, 255, 0.15) 0%, rgba(13, 153, 255, 0) 50%);
+      }
+      .card-hover {
+        transition: all 0.3s ease;
+      }
+      .card-hover:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+      }
+      code {
+        position: relative;
+        display: block;
+        padding: 1.5rem;
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: 0.75rem;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
     </style>
   </head>
-  <body class="bg-figma-primary text-white">
+  <body class="text-white">
     <!-- Header -->
-    <header class="fixed w-full bg-figma-primary/90 backdrop-blur-sm z-50">
-      <nav class="container mx-auto px-8 py-6">
+    <header class="fixed w-full backdrop-blur-md bg-figma-primary/80 border-b border-white/10 z-50">
+      <nav class="container mx-auto px-6 py-4">
         <div class="flex items-center justify-between">
           <div class="text-xl font-bold gradient-text">
             Figma Plugin Boilerplate
@@ -63,38 +83,38 @@
           </div>
           <a
             href="https://github.com/tehfailsafe/figma-plugin-boilerplate"
-            class="bg-figma-accent hover:bg-figma-accent/90 px-8 py-3 rounded-full transition-colors"
+            class="bg-white/10 hover:bg-white/20 px-6 py-2 rounded-full transition-all flex items-center space-x-2 border border-white/10"
           >
-            <i class="fab fa-github mr-2"></i>GitHub
+            <i class="fab fa-github"></i>
+            <span>GitHub</span>
           </a>
         </div>
       </nav>
     </header>
 
     <!-- Hero Section -->
-    <section class="pt-40 pb-32 px-8">
-      <div class="container mx-auto text-center max-w-5xl">
-        <h1 class="text-6xl md:text-7xl font-bold mb-10 leading-tight">
-          Modern <span class="gradient-text">Figma Plugin</span
-          ><br />Development
+    <section class="hero-gradient pt-48 pb-32 px-6">
+      <div class="container mx-auto text-center max-w-4xl">
+        <div class="inline-block px-4 py-2 bg-white/5 rounded-full text-sm mb-8 border border-white/10">
+          🚀 Modern Figma Plugin Development
+        </div>
+        <h1 class="text-5xl md:text-7xl font-bold mb-8 leading-tight">
+          Build Better <span class="gradient-text">Figma Plugins</span>
         </h1>
-        <p
-          class="text-xl md:text-2xl text-gray-400 mb-16 max-w-3xl mx-auto leading-relaxed"
-        >
+        <p class="text-lg md:text-xl text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed">
           A supercharged boilerplate for building Figma plugins with React,
-          TypeScript, and Tailwind CSS. Start building faster with modern tools
-          and components.
+          TypeScript, and Tailwind CSS. Start building faster with modern tools.
         </p>
-        <div class="flex flex-col md:flex-row gap-6 justify-center">
+        <div class="flex flex-col md:flex-row gap-4 justify-center">
           <a
             href="#getting-started"
-            class="bg-figma-accent hover:bg-figma-accent/90 px-10 py-4 rounded-full text-lg font-medium transition-colors"
+            class="bg-figma-accent hover:bg-figma-accent/90 px-8 py-3 rounded-full text-lg font-medium transition-all"
           >
             Get Started
           </a>
           <a
             href="https://github.com/tehfailsafe/figma-plugin-boilerplate"
-            class="bg-figma-secondary hover:bg-figma-secondary/90 px-10 py-4 rounded-full text-lg font-medium transition-colors"
+            class="bg-white/5 hover:bg-white/10 px-8 py-3 rounded-full text-lg font-medium transition-all border border-white/10"
           >
             <i class="fab fa-github mr-2"></i>View on GitHub
           </a>
@@ -103,39 +123,43 @@
     </section>
 
     <!-- Features Section -->
-    <section id="features" class="py-32 bg-figma-secondary">
-      <div class="container mx-auto px-8">
-        <h2 class="text-4xl md:text-5xl font-bold text-center mb-24">
-          Everything You Need to Build
-          <span class="gradient-text">Amazing Plugins</span>
-        </h2>
-        <div class="grid md:grid-cols-3 gap-12">
-          <div class="bg-figma-primary p-10 rounded-2xl">
-            <div class="text-figma-accent text-4xl mb-6">
+    <section id="features" class="py-32">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-20">
+          <h2 class="text-4xl md:text-5xl font-bold">
+            Everything You Need to Build <span class="gradient-text">Amazing Plugins</span>
+          </h2>
+          <p class="text-gray-400 mt-6 text-lg max-w-2xl mx-auto">
+            Start with a solid foundation and build your plugin faster than ever before
+          </p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-white/5 p-8 rounded-2xl card-hover border border-white/10">
+            <div class="text-figma-accent text-3xl mb-6">
               <i class="fas fa-bolt"></i>
             </div>
-            <h3 class="text-2xl font-semibold mb-4">Modern Stack</h3>
-            <p class="text-gray-400 text-lg leading-relaxed">
+            <h3 class="text-xl font-semibold mb-4">Modern Stack</h3>
+            <p class="text-gray-400 leading-relaxed">
               Built with React 18, TypeScript, and Tailwind CSS for a modern
               development experience.
             </p>
           </div>
-          <div class="bg-figma-primary p-10 rounded-2xl">
-            <div class="text-figma-accent text-4xl mb-6">
+          <div class="bg-white/5 p-8 rounded-2xl card-hover border border-white/10">
+            <div class="text-figma-accent text-3xl mb-6">
               <i class="fas fa-palette"></i>
             </div>
-            <h3 class="text-2xl font-semibold mb-4">UI Components</h3>
-            <p class="text-gray-400 text-lg leading-relaxed">
+            <h3 class="text-xl font-semibold mb-4">UI Components</h3>
+            <p class="text-gray-400 leading-relaxed">
               Pre-built, customizable components from shadcn/ui for rapid
               development.
             </p>
           </div>
-          <div class="bg-figma-primary p-10 rounded-2xl">
-            <div class="text-figma-accent text-4xl mb-6">
+          <div class="bg-white/5 p-8 rounded-2xl card-hover border border-white/10">
+            <div class="text-figma-accent text-3xl mb-6">
               <i class="fas fa-moon"></i>
             </div>
-            <h3 class="text-2xl font-semibold mb-4">Dark Mode</h3>
-            <p class="text-gray-400 text-lg leading-relaxed">
+            <h3 class="text-xl font-semibold mb-4">Dark Mode</h3>
+            <p class="text-gray-400 leading-relaxed">
               Built-in dark mode support with easy theme customization.
             </p>
           </div>
@@ -145,88 +169,97 @@
 
     <!-- Getting Started Section -->
     <section id="getting-started" class="py-32">
-      <div class="container mx-auto px-8">
-        <h2 class="text-4xl md:text-5xl font-bold text-center mb-24">
-          Get Started in <span class="gradient-text">Minutes</span>
-        </h2>
-        <div class="max-w-4xl mx-auto bg-figma-secondary rounded-2xl p-10">
-          <div class="space-y-6">
-            <div class="bg-figma-primary rounded-xl p-6">
-              <p class="text-gray-400 mb-3 text-lg"># Clone the repository</p>
-              <code class="text-figma-accent text-lg">
-                git clone
-                https://github.com/tehfailsafe/figma-plugin-boilerplate.git
-              </code>
-            </div>
-            <div class="bg-figma-primary rounded-xl p-6">
-              <p class="text-gray-400 mb-3 text-lg"># Install dependencies</p>
-              <code class="text-figma-accent text-lg"> npm install </code>
-            </div>
-            <div class="bg-figma-primary rounded-xl p-6">
-              <p class="text-gray-400 mb-3 text-lg">
-                # Start development server
-              </p>
-              <code class="text-figma-accent text-lg"> npm run dev </code>
-            </div>
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-20">
+          <h2 class="text-4xl md:text-5xl font-bold">
+            Get Started in <span class="gradient-text">Minutes</span>
+          </h2>
+          <p class="text-gray-400 mt-6 text-lg max-w-2xl mx-auto">
+            Three simple steps to get your plugin up and running
+          </p>
+        </div>
+        <div class="max-w-3xl mx-auto space-y-6">
+          <div>
+            <p class="text-gray-400 mb-3 text-sm font-medium"># Clone the repository</p>
+            <code class="text-figma-accent">
+              git clone https://github.com/tehfailsafe/figma-plugin-boilerplate.git
+            </code>
+          </div>
+          <div>
+            <p class="text-gray-400 mb-3 text-sm font-medium"># Install dependencies</p>
+            <code class="text-figma-accent">
+              npm install
+            </code>
+          </div>
+          <div>
+            <p class="text-gray-400 mb-3 text-sm font-medium"># Start development server</p>
+            <code class="text-figma-accent">
+              npm run dev
+            </code>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Components Preview Section -->
-    <section id="components" class="py-32 bg-figma-secondary">
-      <div class="container mx-auto px-8">
-        <h2 class="text-4xl md:text-5xl font-bold text-center mb-24">
-          Beautiful <span class="gradient-text">Components</span> Included
-        </h2>
-        <div class="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          <div class="bg-figma-primary p-10 rounded-2xl">
-            <h3 class="text-2xl font-semibold mb-8">UI Components</h3>
-            <ul class="space-y-4 text-gray-400 text-lg">
-              <li>
-                <i class="fas fa-check text-figma-accent mr-3"></i>Buttons &
-                Badges
+    <section id="components" class="py-32">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-20">
+          <h2 class="text-4xl md:text-5xl font-bold">
+            Beautiful <span class="gradient-text">Components</span> Included
+          </h2>
+          <p class="text-gray-400 mt-6 text-lg max-w-2xl mx-auto">
+            Everything you need to build a professional plugin interface
+          </p>
+        </div>
+        <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <div class="bg-white/5 p-8 rounded-2xl card-hover border border-white/10">
+            <h3 class="text-xl font-semibold mb-6">UI Components</h3>
+            <ul class="space-y-4 text-gray-400">
+              <li class="flex items-center">
+                <i class="fas fa-check text-figma-accent mr-3"></i>
+                <span>Buttons & Badges</span>
               </li>
-              <li>
-                <i class="fas fa-check text-figma-accent mr-3"></i>Modals &
-                Dialogs
+              <li class="flex items-center">
+                <i class="fas fa-check text-figma-accent mr-3"></i>
+                <span>Modals & Dialogs</span>
               </li>
-              <li>
-                <i class="fas fa-check text-figma-accent mr-3"></i>Forms &
-                Inputs
+              <li class="flex items-center">
+                <i class="fas fa-check text-figma-accent mr-3"></i>
+                <span>Forms & Inputs</span>
               </li>
-              <li>
-                <i class="fas fa-check text-figma-accent mr-3"></i>Navigation
-                Components
+              <li class="flex items-center">
+                <i class="fas fa-check text-figma-accent mr-3"></i>
+                <span>Navigation Components</span>
               </li>
-              <li>
-                <i class="fas fa-check text-figma-accent mr-3"></i>And many
-                more...
+              <li class="flex items-center">
+                <i class="fas fa-check text-figma-accent mr-3"></i>
+                <span>And many more...</span>
               </li>
             </ul>
           </div>
-          <div class="bg-figma-primary p-10 rounded-2xl">
-            <h3 class="text-2xl font-semibold mb-8">Developer Experience</h3>
-            <ul class="space-y-4 text-gray-400 text-lg">
-              <li>
-                <i class="fas fa-check text-figma-accent mr-3"></i>TypeScript
-                Support
+          <div class="bg-white/5 p-8 rounded-2xl card-hover border border-white/10">
+            <h3 class="text-xl font-semibold mb-6">Developer Experience</h3>
+            <ul class="space-y-4 text-gray-400">
+              <li class="flex items-center">
+                <i class="fas fa-check text-figma-accent mr-3"></i>
+                <span>TypeScript Support</span>
               </li>
-              <li>
-                <i class="fas fa-check text-figma-accent mr-3"></i>Hot Module
-                Replacement
+              <li class="flex items-center">
+                <i class="fas fa-check text-figma-accent mr-3"></i>
+                <span>Hot Module Replacement</span>
               </li>
-              <li>
-                <i class="fas fa-check text-figma-accent mr-3"></i>Webpack
-                Configuration
+              <li class="flex items-center">
+                <i class="fas fa-check text-figma-accent mr-3"></i>
+                <span>Webpack Configuration</span>
               </li>
-              <li>
-                <i class="fas fa-check text-figma-accent mr-3"></i>ESLint &
-                Prettier
+              <li class="flex items-center">
+                <i class="fas fa-check text-figma-accent mr-3"></i>
+                <span>ESLint & Prettier</span>
               </li>
-              <li>
-                <i class="fas fa-check text-figma-accent mr-3"></i>Production
-                Optimization
+              <li class="flex items-center">
+                <i class="fas fa-check text-figma-accent mr-3"></i>
+                <span>Production Optimization</span>
               </li>
             </ul>
           </div>
@@ -235,23 +268,23 @@
     </section>
 
     <!-- Footer -->
-    <footer class="py-20 bg-figma-primary">
-      <div class="container mx-auto px-8 text-center">
-        <p class="text-gray-400 text-lg">
+    <footer class="py-20">
+      <div class="container mx-auto px-6 text-center">
+        <p class="text-gray-400">
           Built with ❤️ by the community. MIT License.
         </p>
-        <div class="mt-8 space-x-6">
+        <div class="mt-6 space-x-4">
           <a
             href="https://github.com/tehfailsafe/figma-plugin-boilerplate"
             class="text-gray-400 hover:text-figma-accent transition-colors"
           >
-            <i class="fab fa-github text-2xl"></i>
+            <i class="fab fa-github text-xl"></i>
           </a>
           <a
             href="https://twitter.com/tehfailsafe"
             class="text-gray-400 hover:text-figma-accent transition-colors"
           >
-            <i class="fab fa-twitter text-2xl"></i>
+            <i class="fab fa-twitter text-xl"></i>
           </a>
         </div>
       </div>
