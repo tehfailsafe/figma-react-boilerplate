@@ -1,6 +1,6 @@
-# 🎨 Modern Figma Plugin Template
+# 🎨 Modern Figma Plugin boilerplate
 
-A supercharged Figma plugin template with React, Tailwind CSS, and shadcn/ui components. Built for developers who want to create beautiful, responsive, and accessible Figma plugins with modern web technologies.
+A supercharged Figma plugin boilerplate with React, Tailwind CSS, and shadcn/ui components. Built for developers who want to create beautiful, responsive, and accessible Figma plugins with modern web technologies.
 
 ## ✨ Features
 
@@ -15,17 +15,20 @@ A supercharged Figma plugin template with React, Tailwind CSS, and shadcn/ui com
 ## 🚀 Quick Start
 
 1. Clone this repository
+
 ```bash
-git clone https://github.com/yourusername/figma-plugin-template.git
-cd figma-plugin-template
+git clone https://github.com/yourusername/figma-plugin-boilerplate.git
+cd figma-plugin-boilerplate
 ```
 
 2. Install dependencies
+
 ```bash
 npm install
 ```
 
 3. Start development server
+
 ```bash
 npm run dev
 ```
@@ -37,6 +40,7 @@ npm run dev
 ## 🛠️ Development
 
 ### Project Structure
+
 ```
 src/
   ├── components/    # React components
@@ -56,13 +60,15 @@ src/
 ## 🎨 Customization
 
 ### Theming
-The template comes with a beautiful default theme, but you can easily customize it:
+
+The boilerplate comes with a beautiful default theme, but you can easily customize it:
 
 1. Modify `src/styles/globals.css` for theme variables
 2. Update `tailwind.config.js` for Tailwind configuration
 3. Use shadcn/ui components from `src/components/ui/`
 
 ### Adding New Components
+
 ```bash
 # Example: Adding a new shadcn/ui component
 npx shadcn-ui@latest add button
@@ -81,4 +87,4 @@ Contributions are welcome! Feel free to submit issues and pull requests.
 
 ## 📝 License
 
-MIT License - feel free to use this template for your own plugins!
+MIT License - feel free to use this boilerplate for your own plugins!
